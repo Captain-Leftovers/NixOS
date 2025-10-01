@@ -16,7 +16,7 @@
 
   # Program Options
   browser = "vivaldi"; # Set Default Browser (google-chrome-stable for google-chrome)
-  terminal = "kitty"; # Set Default System Terminal
+  terminal = "ghostty"; # Set Default System Terminal
   keyboardLayout = "us";
   consoleKeyMap = "us";
 
@@ -55,7 +55,6 @@
   # Set Stylix Image
   #stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
   stylixImage = ../../wallpapers/22.png;
-
   # Set Waybar
   # Includes alternates such as:
   # Just uncomment the one you want and comment out the others
