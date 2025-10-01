@@ -2,13 +2,16 @@
   pkgs,
   host,
   lib,
+
   ...
-}: let
+}:
+let
   inherit (import ../../hosts/${host}/variables.nix) stylixImage stylixEnable;
 in
 lib.mkIf stylixEnable {
   # Styling Options
   stylix = {
+    autoEnable = true;
     enable = true;
     image = stylixImage;
     # base16Scheme = {
