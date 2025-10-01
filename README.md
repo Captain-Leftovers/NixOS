@@ -1,8 +1,7 @@
-# ❄️BlackDonOS Powered by NixOS❄️
+# ❄️BerserkOS Powered by NixOS❄️
 
 A customized NixOS configuration based on [ZaneyOS](https://gitlab.com/zaney/zaneyos) by Tyler Kelley, tailored for multiple host setups with NVIDIA GPU support.
 
-![Black Don OS Desktop](img/desktop-screenshot.png)
 
 ## Overview
 
