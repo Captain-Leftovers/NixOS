@@ -99,8 +99,8 @@ in
         border_size = 2;
         resize_on_border = true;
         "col.active_border" =
-          "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base0C}) 45deg";
-        "col.inactive_border" = "rgb(${config.lib.stylix.colors.base01})";
+          lib.mkDefault "rgb(${config.lib.stylix.colors.base08}) rgb(${config.lib.stylix.colors.base0C}) 45deg";
+        "col.inactive_border" = lib.mkDefault "rgb(${config.lib.stylix.colors.base01})";
       };
 
       misc = {

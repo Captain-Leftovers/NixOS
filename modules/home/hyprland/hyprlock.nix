@@ -1,4 +1,5 @@
-{username, ...}: {
+{ username, lib, ... }:
+{
   programs.hyprlock = {
     enable = true;
     settings = {
@@ -20,7 +21,7 @@
           path = "/home/${username}/black-don-os/img/UpdatedTheBlackDon.png";
           size = 150;
           border_size = 4;
-          border_color = "rgb(0C96F9)";
+          border_color = lib.mkDefault "rgb(0C96F9)";
           rounding = -1; # Negative means circle
           position = "0, 200";
           halign = "center";
