@@ -17,7 +17,7 @@ lib.mkIf stylixEnable {
     ghostty.enable = true;
     qt.enable = true;
     zed.enable = true;
-    chromium.enable = true;
+    # chromium.enable = true;  #??? not working
   };
 
   services.nwg-drawer-stylix.enable = true;

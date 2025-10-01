@@ -1,6 +1,8 @@
-{inputs, host, ...}: let
+{ inputs, host, ... }:
+let
   inherit (import ../../hosts/${host}/variables.nix) waybarChoice;
-in {
+in
+{
   imports = [
     ./amfora.nix
     ./bash.nix
@@ -36,7 +38,7 @@ in {
     ./vicinae.nix
     ./virtmanager.nix
     ./vscode.nix
-    waybarChoice
+    # waybarChoice
     ./wlogout
     ./xdg.nix
     ./yazi
