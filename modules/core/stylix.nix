@@ -10,12 +10,6 @@ let
 in
 lib.mkIf stylixEnable {
 
-  # Install + manage Ghostty in HM scope
-  programs.ghostty.enable = true;
-
-  # Let Stylix own Ghostty's theme
-  stylix.targets.ghostty.enable = true;
-
   # Styling Options
   stylix = {
     autoEnable = true;
