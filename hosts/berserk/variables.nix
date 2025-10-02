@@ -54,7 +54,9 @@
 
   # Set Stylix Image
   #stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
-  stylixImage = ../../wallpapers/berserk/10.jpg;
+  # stylixImage = ../../wallpapers/13.png;
+  stylixImage = ../../wallpapers/berserk/b-w.jpg;
+
   # Set Waybar
   # Includes alternates such as:
   # Just uncomment the one you want and comment out the others
