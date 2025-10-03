@@ -13,6 +13,7 @@ let
     ;
 in
 {
+
   home.packages = with pkgs; [
     swww
     grim
@@ -27,6 +28,9 @@ in
     "xdg-desktop-autostart.target"
   ];
   # Place Files Inside Home Directory
+  xdg.configFile."hypr/monitors.conf".source = ./monitors.conf;
+  xdg.configFile."hypr/workspaces.conf".source = ./workspaces.conf;
+
   home.file = {
     "Pictures/Wallpapers" = {
       source = ../../../wallpapers;
@@ -175,15 +179,14 @@ in
       };
     };
 
-    extraConfig = "
-      monitor=,preferred,auto,auto
-      monitor=Virtual-1,1920x1080@60,auto,1
-      ${
-            extraMonitorSettings
-          }
+    #${extraMonitorSettings} #add below if you want control from variables in host
+    extraConfig = lib.mkAfter "
+              source = ~/.config/hypr/monitors.conf
+              source = ~/.config/hypr/workspaces.conf
+
       # To enable blur on waybar uncomment the line below
       # Thanks to SchotjeChrisman
-      #layerrule = blur,waybar
+      layerrule = blur,waybar
     ";
   };
 }
