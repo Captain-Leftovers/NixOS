@@ -11,8 +11,18 @@ let
     keyboardLayout
     stylixImage
     ;
+  # One place to change if you move the repo name
+  repoRoot = "${config.home.homeDirectory}/black-don-os";
 in
 {
+
+  xdg.configFile."hypr/monitors.conf".source =
+    lib.file.mkOutOfStoreSymlink "${repoRoot}/modules/home/hyprland/monitors.conf";
+  # Explanation: makes ~/.config/hypr/monitors.conf → <home>/black-don-os/modules/.../monitors.conf (writable, not /nix/store)
+
+  xdg.configFile."hypr/workspaces.conf".source =
+    lib.file.mkOutOfStoreSymlink "${repoRoot}/modules/home/hyprland/workspaces.conf";
+  # Explanation: same for workspaces.conf
 
   home.packages = with pkgs; [
     swww
@@ -28,8 +38,6 @@ in
     "xdg-desktop-autostart.target"
   ];
   # Place Files Inside Home Directory
-  xdg.configFile."hypr/monitors.conf".source = ./monitors.conf;
-  xdg.configFile."hypr/workspaces.conf".source = ./workspaces.conf;
 
   home.file = {
     "Pictures/Wallpapers" = {
