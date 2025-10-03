@@ -11,18 +11,8 @@ let
     keyboardLayout
     stylixImage
     ;
-  # One place to change if you move the repo name
-  repoRoot = "${config.home.homeDirectory}/black-don-os";
 in
 {
-
-  xdg.configFile."hypr/monitors.conf".source =
-    lib.file.mkOutOfStoreSymlink "${repoRoot}/modules/home/hyprland/monitors.conf";
-  # Explanation: makes ~/.config/hypr/monitors.conf → <home>/black-don-os/modules/.../monitors.conf (writable, not /nix/store)
-
-  xdg.configFile."hypr/workspaces.conf".source =
-    lib.file.mkOutOfStoreSymlink "${repoRoot}/modules/home/hyprland/workspaces.conf";
-  # Explanation: same for workspaces.conf
 
   home.packages = with pkgs; [
     swww
@@ -187,11 +177,10 @@ in
       };
     };
 
-    #${extraMonitorSettings} #add below if you want control from variables in host
-    extraConfig = lib.mkAfter "
-              source = ~/.config/hypr/monitors.conf
-              source = ~/.config/hypr/workspaces.conf
-
+    extraConfig = "
+    ${
+          extraMonitorSettings
+        }
       # To enable blur on waybar uncomment the line below
       # Thanks to SchotjeChrisman
       layerrule = blur,waybar
