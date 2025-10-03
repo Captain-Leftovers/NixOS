@@ -38,7 +38,8 @@ in
     ./vicinae.nix
     ./virtmanager.nix
     ./vscode.nix
-    # waybarChoice
+    waybarChoice
+    # ./waybar/waybar.nix
     ./wlogout
     ./xdg.nix
     ./yazi

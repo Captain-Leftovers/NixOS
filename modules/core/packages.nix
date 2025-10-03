@@ -1,4 +1,10 @@
-{pkgs, pkgs-unstable, lib, ...}: {
+{
+  pkgs,
+  pkgs-unstable,
+  lib,
+  ...
+}:
+{
   programs = {
     neovim = {
       enable = false;
@@ -7,8 +13,8 @@
     firefox.enable = false; # Firefox is not installed by default
     dconf.enable = true;
     seahorse.enable = true;
-    hyprland.enable = true; #create desktop file and depedencies if you switch to GUI login MGR
-    hyprlock.enable = true; #resolve pam issue https://gitlab.com/Zaney/zaneyos/-/issues/164
+    hyprland.enable = true; # create desktop file and depedencies if you switch to GUI login MGR
+    hyprlock.enable = true; # resolve pam issue https://gitlab.com/Zaney/zaneyos/-/issues/164
     fuse.userAllowOther = true;
     mtr.enable = true;
     adb.enable = true;
@@ -19,13 +25,15 @@
   };
 
   nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.allowUnfreePredicate = pkg: builtins.elem (lib.getName pkg) [
-    "cursor"
-    "zed"
-    "flutter"
-    "jdk"
-    "claude"
-  ];
+  nixpkgs.config.allowUnfreePredicate =
+    pkg:
+    builtins.elem (lib.getName pkg) [
+      "cursor"
+      "zed"
+      "flutter"
+      "jdk"
+      "claude"
+    ];
 
   environment.systemPackages = with pkgs; [
     amfora # Fancy Terminal Browser For Gemini Protocol
@@ -44,7 +52,7 @@
     gedit # Simple Graphical Text Editor
     gimp # Great Photo Editor
     glxinfo # Needed for inxi -G GPU info
-    gping #graphical ping
+    gping # graphical ping
     greetd.tuigreet # The Login Manager (Sometimes Referred To As Display Manager)
     htop # Simple Terminal Based System Monitor
     hyprpicker # Color Picker
@@ -64,7 +72,7 @@
     nixfmt-rfc-style # Nix Formatter
     nixd # Nix Language Server
     nil # Nix Language Server
-    onefetch #shows current build info and stats
+    onefetch # shows current build info and stats
     pavucontrol # For Editing Audio Levels & Devices
     pciutils # Collection Of Tools For Inspecting PCI Devices
     picard # For Changing Music Metadata & Getting Cover Art
@@ -88,7 +96,6 @@
     nwg-displays # Manage Displays
     nwg-drawer # drawer GUI
     vivaldi # Browser
-    youtube-music
     # Unstable Packages
     pkgs-unstable.code-cursor # AI IDE
     pkgs-unstable.zed-editor # Another AI IDE
@@ -103,8 +110,8 @@
     chromium # Browser
     google-chrome # Browser
     # Dev Packages
-    androidenv.androidPkgs.platform-tools  # This includes adb
-    androidenv.androidPkgs.emulator        # For Android emulator
+    androidenv.androidPkgs.platform-tools # This includes adb
+    androidenv.androidPkgs.emulator # For Android emulator
     androidenv.androidPkgs.ndk-bundle
     # Firebase CLI
     firebase-tools
