@@ -33,8 +33,8 @@
           size = "200, 50";
           position = "0, -80";
           monitor = "";
-          dots_center = true;
-          fade_on_empty = false;
+          dots_center = lib.mkDefault true;
+          fade_on_empty = lib.mkDefault false;
           font_color = lib.mkDefault "rgb(CFE6F4)";
           inner_color = lib.mkDefault "rgb(657DC2)";
           outer_color = lib.mkDefault "rgb(0D0E15)";

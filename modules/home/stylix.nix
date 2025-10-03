@@ -13,7 +13,7 @@ lib.mkIf stylixEnable {
     waybar.enable = true;
     rofi.enable = true;
     hyprland.enable = true;
-    hyprlock.enable = true;
+    hyprlock.enable = false;
     ghostty.enable = true;
     qt.enable = true;
     zed.enable = true;
