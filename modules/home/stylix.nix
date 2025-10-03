@@ -11,9 +11,9 @@ lib.mkIf stylixEnable {
 
   stylix.targets = {
     waybar.enable = true;
-    rofi.enable = false;
-    hyprland.enable = false;
-    hyprlock.enable = false;
+    rofi.enable = true;
+    hyprland.enable = true;
+    hyprlock.enable = true;
     ghostty.enable = true;
     qt.enable = true;
     zed.enable = true;
