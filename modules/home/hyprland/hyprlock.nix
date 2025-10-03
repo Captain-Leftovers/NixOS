@@ -9,16 +9,16 @@
         hide_cursor = true;
         no_fade_in = false;
       };
-      background = [
+      background = lib.mkDefault [
         {
-          path = "/home/${username}/Pictures/Wallpapers/City-asteroid-attack.jpg";
+          path = "/home/${username}/Pictures/Wallpapers/16.png";
           blur_passes = 3;
           blur_size = 8;
         }
       ];
       image = [
         {
-          path = "/home/${username}/black-don-os/img/UpdatedTheBlackDon.png";
+          path = "/home/${username}/black-don-os/img/berserk.png";
           size = 150;
           border_size = 4;
           border_color = lib.mkDefault "rgb(0C96F9)";
