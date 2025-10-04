@@ -19,14 +19,14 @@
         display-run = " Run";
         display-filebrowser = " File";
       };
-      theme = lib.mkDefault (
+      theme = lib.mkForce (
         let
           inherit (config.lib.formats.rasi) mkLiteral;
         in
         {
           "*" = {
             bg = mkLiteral "#${config.stylix.base16Scheme.base00}";
-            bg-alt = mkLiteral "#${config.stylix.base17Scheme.base09}";
+            bg-alt = mkLiteral "#${config.stylix.base16Scheme.base09}";
             foreground = mkLiteral "#${config.stylix.base16Scheme.base01}";
             selected = mkLiteral "#${config.stylix.base16Scheme.base08}";
             active = mkLiteral "#${config.stylix.base16Scheme.base0B}";
