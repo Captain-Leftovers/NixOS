@@ -246,7 +246,7 @@ with lib;
           border-radius: 8px 8px 8px 8px;
         }
         #pulseaudio {
-          padding:0,36px;
+          min-width: 85px;
         }
         #custom-startmenu {
           color: #${config.lib.stylix.colors.base0B};
