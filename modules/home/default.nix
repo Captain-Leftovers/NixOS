@@ -30,7 +30,7 @@ in
     ./qt.nix
     ./scripts
     ./starship.nix
-    ./stylix.nix
+    # ./stylix.nix
     ./swappy.nix
     ./swaync.nix
     ./tealdeer.nix
