@@ -45,6 +45,7 @@ in
     ./yazi
     ./zoxide.nix
     ./zsh
+    ./zen.nix # Zen Browser Home manager setup
     ./environment.nix
   ];
 }

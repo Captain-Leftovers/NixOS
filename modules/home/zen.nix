@@ -5,7 +5,9 @@
   ...
 }:
 {
-  imports = [ inputs.zen-browser.homeModules.beta ];
+  imports = [
+    inputs.zen-browser.homeModules.beta
+  ];
 
   xdg.mimeApps =
     let
