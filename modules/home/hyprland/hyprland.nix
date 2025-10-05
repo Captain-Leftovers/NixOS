@@ -71,11 +71,7 @@ in
           "caps:super"
         ];
         numlock_by_default = true;
-        repeat_delay = 300;ng =
-        gs}
-        wayb
-        hris
-        ayba
+        repeat_delay = 300;
         follow_mouse = 1;
         float_switch_override_focus = 0;
         sensitivity = 0;
@@ -99,11 +95,7 @@ in
 
       general = {
         "$modifier" = "SUPER";
-        layout = "dwindle";ng =
-        gs}
-        wayb
-        hris
-        ayba
+        layout = "dwindle";
         gaps_in = 5;
         gaps_out = 5;
         border_size = 2;
@@ -186,10 +178,12 @@ in
     };
 
     extraConfig = "
-    ${extraMonitorSettings}
-    # To enable blur on waybar uncomment the line below
-    # Thanks to SchotjeChrisman
-    # layerrule = blur,waybar
+    ${
+          extraMonitorSettings
+        }
+    To enable blur on waybar uncomment the line below
+    Thanks to SchotjeChrisman
+    layerrule = blur,waybar
     ";
   };
 }
