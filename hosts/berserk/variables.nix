@@ -10,8 +10,9 @@
   extraMonitorSettings = ''
     monitor=desc:Lenovo Group Limited 0x416B,3840x2160@60.0,4678x1705,2.0
     monitor=desc:ASUSTek COMPUTER INC VG279 K8LMQS102647,1920x1080@60.0,3598x761,1.0
-    monitor=desc:ASUSTek COMPUTER INC VG279 K8LMQS102647,transform,3
-    monitor=desc:Lenovo Group Limited LEN L28u-30 U1B512XD,3840x2160@60.0,4678x625,2.0000000000000004
+    monitor=desc:ASUSTek COMPUTER INC VG279 K8LMQS102647,transform,1
+    monitor=desc:Lenovo Group Limited LEN L28u-30 U1B512XD,3840x2160@60.0,4678x625,2.000000000000000
+
   '';
 
   # Waybar Settings
