@@ -25,6 +25,7 @@
       nixpkgs,
       nixpkgs-unstable,
       flake-utils,
+      zen-browser,
       ...
     }@inputs:
     let

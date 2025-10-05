@@ -36,6 +36,7 @@
     ];
 
   environment.systemPackages = with pkgs; [
+    libgbm
     amfora # Fancy Terminal Browser For Gemini Protocol
     appimage-run # Needed For AppImage Support
     bottom # btop like util
