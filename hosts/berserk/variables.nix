@@ -7,9 +7,12 @@
   # Configure your monitors here - this is host-specific
   # ex "monitor=HDMI-A-1, 1920x1080@60,auto,1"
   # You'll need to update this after installation based on your actual monitors
-  #extraMonitorSettings = ''
-  # monitor=,preferred,auto,2
-  # '';
+  extraMonitorSettings = ''
+    monitor=desc:Lenovo Group Limited 0x416B,3840x2160@60.0,4678x1705,2.0
+    monitor=desc:ASUSTek COMPUTER INC VG279 K8LMQS102647,1920x1080@60.0,3598x761,1.0
+    monitor=desc:ASUSTek COMPUTER INC VG279 K8LMQS102647,transform,3
+    monitor=desc:Lenovo Group Limited LEN L28u-30 U1B512XD,3840x2160@60.0,4678x625,2.0000000000000004
+  '';
 
   # Waybar Settings
   clock24h = false;
