@@ -5,7 +5,7 @@
     settings = {
       general = {
         disable_loading_bar = lib.mkDefault true;
-        grace = lib.mkDefault 10;
+        grace = lib.mkDefault 15;
         hide_cursor = lib.mkDefault true;
         no_fade_in = lib.mkDefault false;
       };
@@ -23,11 +23,11 @@
       image = lib.mkDefault [
         {
           path = "/home/${username}/black-don-os/img/berserk.png";
-          size = 150;
-          border_size = 4;
-          border_color = lib.mkDefault "rgb(0C96F9)";
+          size = 500;
+          # border_size = 4;
+          # border_color = lib.mkDefault "rgb(0C96F9)";
           rounding = -1;
-          position = "0, 200";
+          position = "0, 0";
           halign = "center";
           valign = "center";
         }

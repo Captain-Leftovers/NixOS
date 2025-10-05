@@ -252,7 +252,7 @@ with lib;
           color: #${config.lib.stylix.colors.base0B};
           background: #${config.lib.stylix.colors.base02};
           font-size: 30px;
-          margin: 0px;
+          margin-left: 8px;
           padding: 0px 15px 0px 15px;
           border-radius: 16px 16px 16px 16px;
         }
@@ -270,7 +270,7 @@ with lib;
           font-weight: bold;
           color: #0D0E15;
           background: linear-gradient(90deg, #${config.lib.stylix.colors.base0B}, #${config.lib.stylix.colors.base02});
-          margin: 0px;
+          margin-right: 8px;
           padding: 0px 15px 0px 15px;
           border-radius: 16px 16px 16px 16px;
         }

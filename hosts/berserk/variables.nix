@@ -7,9 +7,9 @@
   # Configure your monitors here - this is host-specific
   # ex "monitor=HDMI-A-1, 1920x1080@60,auto,1"
   # You'll need to update this after installation based on your actual monitors
-  extraMonitorSettings = ''
-    monitor=,preferred,auto,2
-  '';
+  #extraMonitorSettings = ''
+  # monitor=,preferred,auto,2
+  # '';
 
   # Waybar Settings
   clock24h = false;
@@ -54,8 +54,8 @@
 
   # Set Stylix Image
   #stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
-  # stylixImage = ../../wallpapers/13.png;
-  stylixImage = ../../wallpapers/berserk/b-w.jpg;
+  stylixImage = ../../wallpapers/22.png;
+  # stylixImage = ../../wallpapers/berserk/b-w.jpg;
 
   # Set Waybar
   # Includes alternates such as:

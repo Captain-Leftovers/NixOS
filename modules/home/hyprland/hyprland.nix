@@ -177,13 +177,11 @@ in
       };
     };
 
-    extraConfig = "
-    ${
-          extraMonitorSettings
-        }
-      # To enable blur on waybar uncomment the line below
-      # Thanks to SchotjeChrisman
-     # layerrule = blur,waybar
-    ";
+    #extraConfig = "
+    # ${extraMonitorSettings}
+    # To enable blur on waybar uncomment the line below
+    # Thanks to SchotjeChrisman
+    # layerrule = blur,waybar
+    # ";
   };
 }
