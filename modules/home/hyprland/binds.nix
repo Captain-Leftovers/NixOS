@@ -104,7 +104,7 @@ let
     ",XF86MonBrightnessDown,exec,brightnessctl set 5%-"
     ",XF86MonBrightnessUp,exec,brightnessctl set +5%"
     # keyboard brightness enable below
-    "$modifier,F12,exec,cycle-kdb-light"
+    "$modifier,F12,exec,toggle-kb-backlight" # Mod+F12 runs the script we just added
 
   ];
 
