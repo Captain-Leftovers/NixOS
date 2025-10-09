@@ -7,6 +7,8 @@
 {
   imports = [
     inputs.zen-browser.homeModules.beta
+    ./zen-qwa.nix
+
   ];
 
   xdg.mimeApps =
