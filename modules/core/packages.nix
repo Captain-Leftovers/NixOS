@@ -123,5 +123,6 @@
     localsend
     obsidian
     kdePackages.kmag
+    desktop-file-utils
   ];
 }

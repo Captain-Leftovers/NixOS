@@ -1,4 +1,4 @@
-# zen-qwa.nix — makes Quick Web Apps (Flatpak) see Zen, declaratively.
+# home/modules/zen-qwa.nix
 {
   config,
   lib,
@@ -7,13 +7,9 @@
 }:
 
 let
-  # Make sure the Zen HM module is actually enabled so we can reuse its package.
   hasZen = (config.programs.zen-browser.enable or false);
-
-  # Use the package that the zen HM module provides (reliable even if it comes from your flake input).
   zenPkg = config.programs.zen-browser.package;
-
-  # Resolve the actual executable name from the package (usually "zen").
+  # Pick the actual binary from the package (usually "zen"; change to "zen-browser" if yours differs)
   zenExe = lib.getExe' zenPkg "zen";
 in
 {
@@ -24,12 +20,12 @@ in
     }
   ];
 
-  # 1) A desktop entry that QWA will classify as a WebBrowser and can see in ~/.local/share/applications
+  # 1) Desktop entry QWA can detect (marked as WebBrowser)
   xdg.desktopEntries.zen-qwa = {
     name = "Zen Browser";
     genericName = "Web Browser";
     comment = "Firefox-based Zen browser";
-    exec = "${zenExe} %u"; # QWA passes the URL to %u
+    exec = "${zenExe} %u"; # QWA passes URL to %u
     terminal = false;
     type = "Application";
     categories = [
@@ -45,14 +41,23 @@ in
     startupNotify = true;
   };
 
-  # 2) Rebuild the desktop DB so Flatpaks/portals discover the new entry
+  # 2) Make sure the desktop DB is refreshed after HM writes files
   home.activation.refreshDesktopDb = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-    update-desktop-database "${config.xdg.dataHome}/applications" || true
+    ${pkgs.desktop-file-utils}/bin/update-desktop-database "${config.xdg.dataHome}/applications" || true
   '';
 
-  # 3) Give QWA (Flatpak dev.heppen.webapps) read-only access to your desktop entries (idempotent)
-  home.activation.qwaFlatpakOverride = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
+  # 3) Flatpak bits: add Flathub, install QWA, and grant it read access to desktop files
+  home.activation.qwaSetup = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     if command -v flatpak >/dev/null 2>&1; then
+      # Add Flathub remote once (idempotent)
+      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+      # Install Quick Web Apps if missing (idempotent, non-interactive)
+      if ! flatpak info dev.heppen.webapps >/dev/null 2>&1; then
+        flatpak install -y --noninteractive flathub dev.heppen.webapps || true
+      fi
+
+      # Grant QWA read-only access to your desktop entries (idempotent)
       flatpak override dev.heppen.webapps \
         --filesystem="${config.xdg.dataHome}/applications:ro" \
         --filesystem="${config.home.profileDirectory}/share/applications:ro" \
