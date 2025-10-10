@@ -1,4 +1,5 @@
-{inputs, ...}: {
+{ inputs, ... }:
+{
   imports = [
     ./boot.nix
     ./controller-support.nix
@@ -24,5 +25,6 @@
     ./virtualisation.nix
     ./xserver.nix
     inputs.stylix.nixosModules.stylix
+    ./expressvpn-system.nix
   ];
 }

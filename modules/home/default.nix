@@ -47,5 +47,6 @@ in
     ./zsh
     ./zen.nix # Zen Browser Home manager setup
     ./environment.nix
+    ./expressvpn.nix
   ];
 }
