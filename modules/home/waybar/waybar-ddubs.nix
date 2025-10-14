@@ -215,7 +215,7 @@ with lib;
               margin: 0px 3px;
               border-radius: 16px;
               color: #${config.lib.stylix.colors.base00};
-              background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+              background: linear-gradient(45deg, #${config.lib.stylix.colors.base03}, #${config.lib.stylix.colors.base05});
               opacity: 0.5;
               transition: ${betterTransition};
             }
@@ -225,7 +225,7 @@ with lib;
               margin: 0px 3px;
               border-radius: 16px;
               color: #${config.lib.stylix.colors.base00};
-              background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+              background: linear-gradient(45deg, #${config.lib.stylix.colors.base04}, #${config.lib.stylix.colors.base05});
               transition: ${betterTransition};
               opacity: 1.0;
               min-width: 40px;
@@ -234,7 +234,7 @@ with lib;
               font-weight: bold;
               border-radius: 16px;
               color: #${config.lib.stylix.colors.base00};
-              background: linear-gradient(45deg, #${config.lib.stylix.colors.base08}, #${config.lib.stylix.colors.base0D});
+              background: linear-gradient(45deg, #${config.lib.stylix.colors.base03}, #${config.lib.stylix.colors.base04});
               opacity: 0.8;
               transition: ${betterTransition};
             }
@@ -251,7 +251,7 @@ with lib;
               margin: 4px 0px;
               margin-left: 7px;
               padding: 0px 18px;
-              background: #${config.lib.stylix.colors.base00};
+              background: #${config.lib.stylix.colors.base01};
               color: #${config.lib.stylix.colors.base08};
               border-radius: 8px 8px 8px 8px;
             }
@@ -259,8 +259,8 @@ with lib;
               min-width: 85px;
             }
             #custom-startmenu {
-              color: #${config.lib.stylix.colors.base0B};
-              background: #${config.lib.stylix.colors.base02};
+              color: #${config.lib.stylix.colors.base00};
+              background: linear-gradient(90deg, #${config.lib.stylix.colors.base03}, #${config.lib.stylix.colors.base04});
               font-size: 30px;
               margin-left: 8px;
               padding: 0px 15px 0px 15px;
@@ -269,7 +269,7 @@ with lib;
             #custom-hyprbindings, #network, #battery,
             #custom-notification, #tray, #custom-exit, #custom-expressvpn {
               font-weight: bold;
-              background: #${config.lib.stylix.colors.base00};
+              background: #${config.lib.stylix.colors.base01};
               color: #${config.lib.stylix.colors.base08};
               margin: 4px 0px;
               margin-right: 7px;
@@ -278,8 +278,8 @@ with lib;
             }
             #clock {
               font-weight: bold;
-              color: #0D0E15;
-              background: linear-gradient(90deg, #${config.lib.stylix.colors.base0B}, #${config.lib.stylix.colors.base02});
+              color: #${config.lib.stylix.colors.base00};
+              background: linear-gradient(90deg, #${config.lib.stylix.colors.base03}, #${config.lib.stylix.colors.base04});
               margin-right: 8px;
               padding: 0px 15px 0px 15px;
               border-radius: 16px 16px 16px 16px;
@@ -292,13 +292,15 @@ with lib;
              } */
 
             #custom-expressvpn.connected {
-          color: #8ec07c; /* greenish for connected */
+          color: #${config.lib.stylix.colors.base0B};
 
         }
 
         #custom-expressvpn.disconnected {
-          color: #fb4934; /* reddish for disconnected */
+          color: #${config.lib.stylix.colors.base08};
         }
+
+
 
 
       ''
