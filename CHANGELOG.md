@@ -45,7 +45,6 @@ Black-Don-OS is a customized NixOS configuration based on ZaneyOS, tailored for 
 
 ### 🎨 Visual Enhancements
 
-- Custom Black-Don-OS branding in fastfetch
 - Enhanced wallpaper collection (60+ wallpapers)
 - Multiple Waybar themes (ddubs, dwm, simple, curved, etc.)
 - Improved Hyprland animations and window rules

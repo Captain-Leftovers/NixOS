@@ -267,7 +267,7 @@ with lib;
               border-radius: 16px 16px 16px 16px;
             }
             #custom-hyprbindings, #network, #battery,
-            #custom-notification, #tray, #custom-exit {
+            #custom-notification, #tray, #custom-exit, #custom-expressvpn {
               font-weight: bold;
               background: #${config.lib.stylix.colors.base00};
               color: #${config.lib.stylix.colors.base08};
@@ -285,11 +285,11 @@ with lib;
               border-radius: 16px 16px 16px 16px;
             }
 
-            #custom-expressvpn {
-              color: ${text_color};
-              padding-left: 5px;
-              padding-right: 5px;
-            }
+            /* #custom-expressvpn {
+               color: #${(config.lib.stylix.colors.base00 or "000000")};
+             padding-left: 5px;
+               padding-right: 5px;
+             } */
 
             #custom-expressvpn.connected {
           color: #8ec07c; /* greenish for connected */
