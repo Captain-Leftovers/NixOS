@@ -59,7 +59,7 @@
   # Set Stylix Image
   #stylixImage = ../../wallpapers/AnimeGirlNightSky.jpg;
   # stylixImage = ../../wallpapers/22.png;
-  stylixImage = ../../wallpapers/berserk/b-w.jpg;
+  stylixImage = ../../wallpapers/berserk/1.png;
   # stylixImage = ../../wallpapers/anime/frieren.jpeg;
 
   # Set Waybar

@@ -198,13 +198,14 @@ with lib;
               border-radius: 0px;
               border: none;
               min-height: 0px;
+              opacity: 0.98;
             }
             window#waybar {
               background: rgba(0,0,0,0);
             }
             #workspaces {
               color: #${config.lib.stylix.colors.base00};
-              background: #${config.lib.stylix.colors.base01};
+              background: #${config.lib.stylix.colors.base02};
               margin: 4px 4px;
               padding: 5px 5px;
               border-radius: 16px;
@@ -251,7 +252,7 @@ with lib;
               margin: 4px 0px;
               margin-left: 7px;
               padding: 0px 18px;
-              background: #${config.lib.stylix.colors.base01};
+              background: #${config.lib.stylix.colors.base02};
               color: #${config.lib.stylix.colors.base08};
               border-radius: 8px 8px 8px 8px;
             }
@@ -269,7 +270,7 @@ with lib;
             #custom-hyprbindings, #network, #battery,
             #custom-notification, #tray, #custom-exit, #custom-expressvpn {
               font-weight: bold;
-              background: #${config.lib.stylix.colors.base01};
+              background: #${config.lib.stylix.colors.base02};
               color: #${config.lib.stylix.colors.base08};
               margin: 4px 0px;
               margin-right: 7px;
