@@ -1,6 +1,7 @@
 { pkgs, inputs, ... }:
 {
   environment.systemPackages = with pkgs; [
+
     inputs.quickshell.packages.${pkgs.system}.default
 
     # Qt6 related kits（for slove Qt5Compat problem）
@@ -10,7 +11,8 @@
     qt6.qtwayland
     qt6.qtdeclarative
     qt6.qtsvg
-
+    qt6.qtimageformats
+    qtmultimedia
     # alternate options
     # libsForQt5.qt5compat
     kdePackages.qt5compat

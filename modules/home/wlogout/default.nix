@@ -5,6 +5,7 @@
     enable = true;
     layout = [
       {
+
         label = "shutdown";
         action = "sleep 1; systemctl poweroff";
         text = "Shutdown";

@@ -1,5 +1,5 @@
 {
-  description = "Black Don OS (Based on ZaneyOS)";
+  description = "Berserk OS (Based on ZaneyOS)";
 
   inputs = {
     home-manager = {
@@ -15,6 +15,15 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     zen-browser.inputs.nixpkgs.follows = "nixpkgs";
     zen-browser.inputs.home-manager.follows = "home-manager";
+
+    nixos-cli.url = "github:nix-community/nixos-cli";
+
+    #caelestia
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+
+    };
   };
 
   outputs =
@@ -23,6 +32,7 @@
       nixpkgs-unstable,
       flake-utils,
       zen-browser,
+      nixos-cli,
       ...
     }@inputs:
     let
