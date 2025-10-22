@@ -48,5 +48,6 @@ in
     ./zen.nix # Zen Browser Home manager setup
     ./environment.nix
     ./expressvpn.nix
+    ./optnix.nix
   ];
 }
