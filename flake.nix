@@ -58,7 +58,15 @@
               config.allowUnfree = true;
             };
           };
-          modules = [ ./profiles/${profile} ];
+          modules = [
+            ./profiles/${profile}
+            (
+              { inputs, ... }:
+              {
+                home-manager.sharedModules = [ inputs.optnix.homeModules.optnix ];
+              }
+            )
+          ];
         };
 
     in
